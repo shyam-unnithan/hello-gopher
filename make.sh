@@ -4,4 +4,4 @@
 CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 
 #Create image using the scratch dockerfile
-docker build -t gopher:latest -f Dockerfile.scratch .
+docker build -t gopher:latest -f Dockerfile .
