@@ -1,5 +1,5 @@
 # STEP 1 build executable binary
-FROM registry.fedoraproject.org/f27/s2i-base:latest as builder
+FROM registry.fedoraproject.org/f27/s2i-base:latest
 
 ENV NAME=golang \
     VERSION=1.9 \
@@ -35,6 +35,7 @@ WORKDIR $GOPATH/src/shyam.dev/hello-gopher/
 RUN go get -d -v
 #build the binary
 RUN $GOPATH/src/shyam.dev/hello-gopher/make.sh
+RUN ls $GOPATH/src/shyam.dev/hello-gopher/
 # STEP 2 build a small image
 # start from scratch
 FROM scratch
