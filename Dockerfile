@@ -38,7 +38,6 @@ RUN $GOPATH/src/shyam.dev/hello-gopher/make.sh
 # STEP 2 build a small image
 # start from scratch
 FROM scratch
-RUN mkdir -p /go/bin
 # Copy our static executable
-COPY main /go/bin/main
-ENTRYPOINT ["/go/bin/main"]
+COPY main /main
+ENTRYPOINT ["/main"]
