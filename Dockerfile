@@ -1,5 +1,5 @@
 # STEP 1 build executable binary
-FROM golang:alpine as builder
+FROM golang:1.8 as builder
 # Install git
 RUN apk update && apk add git 
 COPY . $GOPATH/src/shyam.dev/hello-gopher/
