@@ -39,5 +39,5 @@ RUN $GOPATH/src/shyam.dev/hello-gopher/make.sh
 # start from scratch
 FROM scratch
 # Copy our static executable
-COPY --from=builder /go/bin/main /go/bin/main
+COPY /go/bin/main /go/bin/main
 ENTRYPOINT ["/go/bin/main"]
