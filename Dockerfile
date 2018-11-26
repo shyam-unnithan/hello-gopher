@@ -35,10 +35,10 @@ WORKDIR $GOPATH/src/shyam.dev/hello-gopher/
 RUN go get -d -v
 #build the binary
 RUN $GOPATH/src/shyam.dev/hello-gopher/make.sh
-RUN ls $GOPATH/src/shyam.dev/hello-gopher/
 # STEP 2 build a small image
 # start from scratch
 FROM scratch
+ls $GOPATH/src/shyam.dev/hello-gopher/
 # Copy our static executable
-COPY main /
+COPY $GOPATH/src/shyam.dev/hello-gopher/main /
 ENTRYPOINT ["/main"]
