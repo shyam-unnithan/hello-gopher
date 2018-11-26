@@ -38,7 +38,7 @@ RUN $GOPATH/src/shyam.dev/hello-gopher/make.sh
 # STEP 2 build a small image
 # start from scratch
 FROM scratch
-ls $GOPATH/src/shyam.dev/hello-gopher/
+RUN ls $GOPATH/src/shyam.dev/hello-gopher/
 # Copy our static executable
 COPY $GOPATH/src/shyam.dev/hello-gopher/main /
 ENTRYPOINT ["/main"]
