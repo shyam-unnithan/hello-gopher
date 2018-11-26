@@ -34,7 +34,7 @@ WORKDIR $GOPATH/src/shyam.dev/hello-gopher/
 #you can also use dep
 RUN go get -d -v
 #build the binary
-RUN $GOPATH/src/shyam.dev/hell-gopher/make.sh
+RUN $GOPATH/src/shyam.dev/hello-gopher/make.sh
 # STEP 2 build a small image
 # start from scratch
 FROM scratch
