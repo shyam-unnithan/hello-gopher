@@ -29,7 +29,7 @@ RUN INSTALL_PKGS="golang" && \
     dnf clean all -y
 
 # Install git
-RUN yum update && yum install git 
+RUN yum update && yum -y install git 
 COPY . $GOPATH/src/shyam.dev/hello-gopher/
 WORKDIR $GOPATH/src/shyam.dev/hello-gopher/
 #get dependancies
