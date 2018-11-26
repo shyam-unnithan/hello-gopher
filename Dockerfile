@@ -1,5 +1,5 @@
 # STEP 1 build executable binary
-FROM registry.fedoraproject.org/f27/s2i-base:latest
+FROM registry.fedoraproject.org/f27/s2i-base:latest as builder
 
 ENV NAME=golang \
     VERSION=1.9 \
