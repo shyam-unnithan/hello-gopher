@@ -40,5 +40,5 @@ RUN ls $GOPATH/src/shyam.dev/hello-gopher/
 # start from scratch
 FROM scratch
 # Copy our static executable
-COPY main /main
+COPY main /
 ENTRYPOINT ["/main"]
